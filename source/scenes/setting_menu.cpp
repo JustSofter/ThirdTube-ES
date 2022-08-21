@@ -227,11 +227,12 @@ void Sem_init(void) {
 					(new SelectorView(0, 0, 320, 35))
 						->set_texts({
 							(std::function<std::string ()>) []() { return LOCALIZED(LANG_EN); },
+							(std::function<std::string ()>) []() { return LOCALIZED(LANG_ES); },
 							(std::function<std::string ()>) []() { return LOCALIZED(LANG_JA); }
 						}, var_lang == "ja" ? 1 : 0)
 						->set_title([](const SelectorView &) { return LOCALIZED(UI_LANGUAGE); })
 						->set_on_change([](const SelectorView &view) {
-							auto next_lang = std::vector<std::string>{"en", "ja"}[view.selected_button];
+							auto next_lang = std::vector<std::string>{"en", "es", "ja"}[view.selected_button];
 							if (var_lang != next_lang) {
 								var_lang = next_lang;
 								misc_tasks_request(TASK_RELOAD_STRING_RESOURCE);
@@ -242,18 +243,19 @@ void Sem_init(void) {
 					(new SelectorView(0, 0, 320, 35))
 						->set_texts({
 							(std::function<std::string ()>) []() { return LOCALIZED(LANG_EN); },
+							(std::function<std::string ()>) []() { return LOCALIZED(LANG_ES); },
 							(std::function<std::string ()>) []() { return LOCALIZED(LANG_JA); }
 						}, var_lang_content == "ja" ? 1 : 0)
 						->set_title([](const SelectorView &) { return LOCALIZED(CONTENT_LANGUAGE); })
 						->set_on_change([](const SelectorView &view) {
-							auto next_lang = std::vector<std::string>{"en", "ja"}[view.selected_button];
+							auto next_lang = std::vector<std::string>{"en", "es", "ja"}[view.selected_button];
 							if (var_lang_content != next_lang) {
 								var_lang_content = next_lang;
 								misc_tasks_request(TASK_SAVE_SETTINGS);
 								youtube_change_content_language(var_lang_content);
 							}
 						}),
-					// LCD Brightness
+// LCD Brightness
 					(new BarView(0, 0, 320, 40))
 						->set_values_sync(15, 163, &var_lcd_brightness)
 						->set_title([] (const BarView &view) { return LOCALIZED(LCD_BRIGHTNESS); })
@@ -327,7 +329,7 @@ void Sem_init(void) {
 						->set_on_release([] (const BarView &view) { misc_tasks_request(TASK_SAVE_SETTINGS); }),
 					(new EmptyView(0, 0, 320, 10))
 				}),
-			// Tab #2 : Playback
+// Tab #2 : Playback
 			(new ScrollView(0, 0, 320, 0))
 				->set_views({
 					// Autoplay

@@ -31,9 +31,9 @@ void load_settings() {
 		return settings.count(key) ? settings[key] : default_value;
 	};
 	var_lang = load_string("lang_ui", "en");
-	if (var_lang != "en" && var_lang != "ja") var_lang = "en";
+	if (var_lang != "en" && var_lang != "es" && var_lang != "ja") var_lang = "en";
 	var_lang_content = load_string("lang_content", "en");
-	if (var_lang_content != "en" && var_lang_content != "ja") var_lang_content = "en";
+	if (var_lang_content != "en" && var_lang_content != "es" && var_lang_content != "ja") var_lang_content = "en";
 	var_lcd_brightness = load_int("lcd_brightness", 100);
 	if (var_lcd_brightness < 15 || var_lcd_brightness > 163) var_lcd_brightness = 100;
 	var_time_to_turn_off_lcd = load_int("time_to_turn_off_lcd", 150);
@@ -59,7 +59,7 @@ void load_settings() {
 	video_set_show_debug_info(var_video_show_debug_info);
 }
 void save_settings() {
-	std::string data;
+std::string data;
 	auto add_str = [&] (const std::string &key, const std::string &val) {
 		data += "<" + key + ">" + val + "</" + key + ">\n";
 	};
@@ -69,7 +69,7 @@ void save_settings() {
 	auto add_double = [&] (const std::string &key, double val) {
 		data += "<" + key + ">" + std::to_string(val) + "</" + key + ">\n";
 	};
-	
+
 	add_str("lang_ui", var_lang);
 	add_str("lang_content", var_lang_content);
 	add_int("lcd_brightness", var_lcd_brightness);
