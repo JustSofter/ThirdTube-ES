@@ -39,9 +39,9 @@
 <PITCH>Tono</PITCH>
 
 ----UNUSED----
-<READING_STREAM>Reading Stream</READING_STREAM>
-<SEEKING>Seeking</SEEKING>
-<SEEK_REINITING>Seeking(Reiniting)</SEEK_REINITING>
+<READING_STREAM>Leyendo Stream</READING_STREAM>
+<SEEKING>Observando</SEEKING>
+<SEEK_REINITING>Observando(Reintentando)</SEEK_REINITING>
 ----UNUSED----
 
 <LOADING>Cargando..</LOADING>
@@ -78,7 +78,7 @@
 <SUBSCRIBED_CHANNELS>Suscrito</SUBSCRIBED_CHANNELS>
 <SUBSCRIPTION>Suscripción</SUBSCRIPTION>
 <NEW_VIDEOS>Nuevo</NEW_VIDEOS>
-<HOME>Home</HOME>
+<HOME>Inicio</HOME>
 <NO_VIDEOS>No hay videos</NO_VIDEOS>
 <NO_RESULTS>No se encontraron resultados</NO_RESULTS>
 <SEARCH_HINT>Toca aquí o presiona A para buscar</SEARCH_HINT>

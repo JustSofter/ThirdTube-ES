@@ -1,109 +1,107 @@
-# ThirdTube
+# ThirdTube-ES
 
-A work-in-progress homebrew YouTube client for the 3DS  
-[GBAtemp Thread](https://gbatemp.net/threads/release-thirdtube-a-homebrew-youtube-client-for-the-new-3ds.591696/)  
-[Discord Server](https://discord.gg/CVcThBCQJM)
+Un cliente de YouTube homebrew en progreso para 3DS 
 
-## Instability Warning
+## Aviso de inestabilidad
 
-As this app is still in the alpha stage, you may and will encounter crashes and other bugs.  
-If you find one of those, it would be helpful to open an issue on this GitHub repository.  
+Como esta aplicación aún se encuentra en la etapa alfa, es posible que encuentre bloqueos y otros errores.
+Si encuentra uno de esos, sería útil abrir un problema en este repositorio de GitHub. 
 
-## Description
-It utilizes some undocumented YouTube APIs to get the raw video url and plays the stream using the decoder taken from [Video player for 3DS by Core-2-Extreme](https://github.com/Core-2-Extreme/Video_player_for_3DS).  
-It does not run any javascripts or render html/css, so it's significantly faster than YouTube on the browser.  
-The name is derived from the fact that it is the third YouTube client on 3DS, following the official YouTube app (discontinued) and the new 3DS browser.  
+## Descripción
+Utiliza algunas API de YouTube no documentadas para obtener la URL del video sin procesar y reproduce la transmisión usando el decodificador tomado de [Video player for 3DS de Core-2-Extreme](https://github.com/Core-2-Extreme/Video_player_for_3DS).  
+No ejecuta javascripts ni renderiza html/css, por lo que es significativamente más rápido que YouTube en el navegador.
+El nombre se deriva del hecho de que es el tercer cliente de YouTube en 3DS, después de la aplicación oficial de YouTube (descontinuada) y el nuevo navegador 3DS..  
 
-## QR code
-You can use the qr code below to download & install .cia from 3ds(Thanks @Minionguyjpro)
+## Código QR
+Puede usar el código qr a continuación para descargar e instalar .cia desde 3ds
 <img src="https://github.com/windows-server-2003/ThirdTube/blob/main/images/qr_code.png" width="200" height="200">
 
-## Screenshots
+## Capturas de pantalla
 <img src="https://github.com/windows-server-2003/ThirdTube/blob/main/images/0.jpg" width="400" height="480"> ![](https://github.com/windows-server-2003/ThirdTube/blob/main/images/1.bmp)  
 ![](https://github.com/windows-server-2003/ThirdTube/blob/main/images/3.bmp) ![](https://github.com/windows-server-2003/ThirdTube/blob/main/images/4.bmp)  
 
-## Features
+## Funciones
 
- - Video Playback up to 360p  
-   480p might be possible and could be considered in the future development
- - Livestreams and premiere videos support  
- - Searching  
- - Video suggestion  
- - Comments  
- - Captions  
- - Local watch history and channel subscription  
- - No ads  
-   It's more like "Ads are not implemented" rather than "We have ad-blocking functionality".  
-   Of course, I will never "implement" it :)  
+- Reproducción de video hasta 360p
+   480p podría ser posible y podría considerarse en el desarrollo futuro
+ - Soporte de transmisiones en vivo y videos de estreno
+ - Buscando
+ - Sugerencia de video
+ - Comentarios
+ - Subtítulos
+ - Historial de reproducción local y suscripción al canal
+ - Sin anuncios
+   Es más como "los anuncios no están implementados" en lugar de "una funcionalidad de bloqueo de anuncios".
+   Por supuesto, nunca lo "implementaré" :)
 
-## Controls
+## Controles
 
- - B button : go back to the previous scene  
- - C-pad up/down : scroll
- - L/R : switch between tabs
- - Select + Start : blackout the bottom screen
- - In video player
-    - Arrow left/right : 10 s seek
+- Botón B: volver a la escena anterior
+ - C-pad arriba/abajo: desplazamiento
+ - L/R: cambiar entre pestañas
+ - Seleccionar + Inicio: oscurecer la pantalla inferior
+ - En reproductor de video
+    - Flecha izquierda/derecha: 10 s buscar
 
-Below are for debug purposes
+A continuación se muestran para fines de depuración.
 
- - Select + X : toggle debug log
- - Select + Y : toggle memory usage monitor
- - Select + R + A : toggle FPS monitor
+ - Seleccionar + X: alternar registro de depuración
+ - Seleccionar + Y: alternar el monitor de uso de memoria
+ - Seleccione + R + A: alternar monitor FPS
 
 
 
-## Requirments
-A 3DS (including 2DS) with [Luma3DS](https://github.com/LumaTeam/Luma3DS) installed and [DSP1](https://github.com/zoogie/DSP1) run.  
-I haven't tested the minimum system version, but at least 8.1.0-0 is needed.  
+## Requisitos
+Un 3DS (incluido 2DS) con [Luma3DS](https://github.com/LopezTutoriales/Luma3DS_3GX_Loader_ESP.git) instalado y [DSP1](https://github.com/LopezTutoriales/DSP1-Spanish) en ejecución.
+No he probado la versión mínima del sistema, pero se necesita al menos 8.1.0-0.  
 
 ## FAQs
 
- - Does it make sense?  
-   The **worst** question in the console homebrew scene. Isn't it just exciting to see your favorite videos playing on a 3DS?
+- ¿Tiene sentido?
+   La **peor** pregunta en la scene homebrew de la consola. ¿No es emocionante ver tus videos favoritos en una 3DS?
 
-## Building
-You need:
+## Buildeo
+Necesitas:
 
- - devkitPro with devkitARM r58  
- - ```3ds-zlib``` and ```3ds-mbedtls``` installed in portlibs of devkitPro  
-   You can install it by opening devkitPro msys2 and typing ```pacman -S [package name]```.
+ - devkitPro con devkitARM r58  
+ - ```3ds-zlib``` y ```3ds-mbedtls``` instalado en portlibs de devkitPro
+   Puede instalarlo abriendo devkitPro msys2 y escribiendo ```pacman -S [nombre del paquete]```.
 
-Type ```make``` (if you are on Linux) or ```make all_win``` (if you are on Windows) to build it.  
+Inserte ```make``` (si estás en linux) o ```make all_win``` (si estás en windows) para buildearlo.  
 
- - Building of dependency libraries(optional)  
-   For ffmpeg, libbrotli, and libcurl, follow built.txt in each directory  
-   For libctru, just type ```make``` in library\libctru\source\libctru  
+- Construcción de bibliotecas de dependencia (opcional)
+   Para ffmpeg, libbrotli y libcurl, siga build.txt en cada directorio
+   Para libctru, simplemente escriba ```make``` en biblioteca\libctru\source\libctru
 
-## License
-You can use the code under the terms of the GNU General Public License GPL v3 or under the terms of any later revisions of the GPL. Refer to the provided LICENSE file for further information.
+## Licenscia
+Puede usar el código según los términos de la Licencia pública general de GNU GPL v3 o según los términos de cualquier revisión posterior de la GPL. Consulte el archivo de LICENCIA proporcionado para obtener más información.
 
-## Third-party licenses
+## Licencias Third-party
 
 ### [FFmpeg](https://ffmpeg.org/)
-by the FFmpeg developers under GNU Lesser General Public License (LGPL) version 2.1  
-The modified source code can be found in https://github.com/windows-server-2003/FFmpeg/tree/3ds.  
+por los desarrolladores de FFmpeg bajo GNU Lesser General Public License (LGPL) versión 2.1
+El código fuente modificado se puede encontrar en https://github.com/windows-server-2003/FFmpeg/tree/3ds.  
 ### [rapidjson](https://github.com/Tencent/rapidjson)
-by Tencent and Milo Yip under MIT License  
+por Tencent y Milo Yip bajo licencia MIT 
 ### [libctru](https://github.com/devkitPro/libctru)
-by devkitPro under zlib License  
+por devkitPro bajo licencia zlib
 ### [libcurl](https://curl.se/)
-by Daniel Stenberg and many contributors under the curl License  
+por Daniel Stenberg y muchos colaboradores bajo la licencia curl
 ### [libbrotli](https://github.com/google/brotli)  
-by the Brotli Authors under MIT license
+por los autores de Brotli bajo licencia MIT
 ### [stb](https://github.com/nothings/stb/)
-by Sean Barrett under MIT License and Public Domain  
+por Sean Barrett bajo licencia MIT y dominio público 
 
-## Credits
+## Créditos
 * Core 2 Extreme  
-  For [Video player for 3DS](https://github.com/Core-2-Extreme/Video_player_for_3DS) which this app is based on.  
-  Needless to say, the video playback functionality is essential for this app, and it would not have been possible to develop this software without him spending his time optimizing the code sometimes even with assembly and looking into HW decoding on the new 3DS.
-* dixy52-beep  
-  For in-app textures
+  De [Video player for 3DS](https://github.com/Core-2-Extreme/Video_player_for_3DS) en el que se basa esta aplicación.
+  No hace falta decir que la funcionalidad de reproducción de video es esencial para esta aplicación, y no hubiera sido posible desarrollar este software sin él, dedicó su tiempo a optimizar el código, a veces incluso con el ensamblaje, y analizó la decodificación HW en el nuevo 3DS.
+* dixy52-bip 
+  Para texturas en la aplicación
 * [PokéTube](https://github.com/Poketubepoggu)  
-  For the icon and the banner
-* The contributors of [youtube-dl](https://github.com/ytdl-org/youtube-dl)  
-  As a reference about YouTube webpage parsing. It was especially helpful for the deobfuscation of ciphered signatures.  
-* The contributors of [pytube](https://github.com/pytube/pytube)  
-  As a reference about YouTube webpage parsing. Thanks to its strict dependency-free policy, I was able to port some of the code without difficulty.  
+  Por el icóno y el banner
+* Los contribuyentes de [youtube-dl](https://github.com/ytdl-org/youtube-dl)  
+  Como referencia sobre el análisis de páginas web de YouTube. Fue especialmente útil para la desofuscación de firmas cifradas.
+* Los contribuyentes def [pytube](https://github.com/pytube/pytube)  
+  Como referencia sobre el análisis de páginas web de YouTube. Gracias a su estricta política libre de dependencias, pude portar parte del código sin dificultad.  
 
