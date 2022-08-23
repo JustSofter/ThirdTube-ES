@@ -18,8 +18,8 @@ Puede usar el código qr a continuación para descargar e instalar .cia desde 3d
 <img src="https://raw.githubusercontent.com/JustSofter/ThirdTube-ES/main/images/qr_code.png" width="200" height="200">
 
 ## Capturas de pantalla
-<img src="https://github.com/windows-server-2003/ThirdTube/blob/main/images/0.jpg" width="400" height="480"> ![](https://github.com/windows-server-2003/ThirdTube/blob/main/images/1.bmp)  
-![](https://github.com/windows-server-2003/ThirdTube/blob/main/images/3.bmp) ![](https://github.com/windows-server-2003/ThirdTube/blob/main/images/4.bmp)  
+<img src="https://github.com/Robichani6-1/ThirdTube-ES/blob/main/images/0.png" width="400" height="480"> ![](https://github.com/Robichani6-1/ThirdTube-ES/blob/main/images/1.png)  
+![](https://github.com/Robichani6-1/ThirdTube-ES/blob/main/images/3.png) ![](https://github.com/Robichani6-1/ThirdTube-ES/blob/main/images/4.png)  
 
 ## Funciones
 
