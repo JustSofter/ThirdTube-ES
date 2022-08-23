@@ -15,7 +15,7 @@ El nombre se deriva del hecho de que es el tercer cliente de YouTube en 3DS, des
 ## Código QR
 Puede usar el código qr a continuación para descargar e instalar .cia desde 3ds
 
-<img src="https://github.com/windows-server-2003/ThirdTube/blob/main/images/qr_code.png" width="200" height="200">
+<img src="https://raw.githubusercontent.com/JustSofter/ThirdTube-ES/main/images/qr_code.png" width="200" height="200">
 
 ## Capturas de pantalla
 <img src="https://github.com/windows-server-2003/ThirdTube/blob/main/images/0.jpg" width="400" height="480"> ![](https://github.com/windows-server-2003/ThirdTube/blob/main/images/1.bmp)  
