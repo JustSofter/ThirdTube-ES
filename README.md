@@ -18,12 +18,18 @@ Puede usar el código qr a continuación para descargar e instalar .cia desde 3d
 <img src="https://raw.githubusercontent.com/JustSofter/ThirdTube-ES/main/images/qr_code.png" width="200" height="200">
 
 ## Capturas de pantalla
-<img src="https://github.com/Robichani6-1/ThirdTube-ES/blob/main/images/0.png" width="400" height="480"> ![](https://github.com/Robichani6-1/ThirdTube-ES/blob/main/images/1.png)  
-![](https://github.com/Robichani6-1/ThirdTube-ES/blob/main/images/3.png) ![](https://github.com/Robichani6-1/ThirdTube-ES/blob/main/images/4.png)  
+<img src="https://github.com/JustSofter/ThirdTube-ES/blob/main/images/0.png" width="363" height="250">
+
+![](https://github.com/JustSofter/ThirdTube-ES/blob/main/images/1.png)  
+
+![](https://github.com/JustSofter/ThirdTube-ES/blob/main/images/3.png) 
+
+![](https://github.com/JustSofter/ThirdTube-ES/blob/main/images/4.png)  
 
 ## Funciones
 
 - Reproducción de video hasta 360p
+   
    480p podría ser posible y podría considerarse en el desarrollo futuro
  - Soporte de transmisiones en vivo y videos de estreno
  - Buscando
@@ -32,8 +38,9 @@ Puede usar el código qr a continuación para descargar e instalar .cia desde 3d
  - Subtítulos
  - Historial de reproducción local y suscripción al canal
  - Sin anuncios
-   Es más como "los anuncios no están implementados" en lugar de "una funcionalidad de bloqueo de anuncios".
-   Por supuesto, nunca lo "implementaré" :)
+ 
+ Es más como "los anuncios no están implementados" en lugar de "una funcionalidad de bloqueo de anuncios".
+ Por supuesto, nunca lo "implementaré" :)
 
 ## Controles
 
