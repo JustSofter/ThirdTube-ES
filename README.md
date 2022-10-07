@@ -22,10 +22,6 @@ Puede usar el código qr a continuación para descargar e instalar .cia desde 3d
 
 ![](https://github.com/JustSofter/ThirdTube-ES/blob/main/images/1.png)  
 
-![](https://github.com/JustSofter/ThirdTube-ES/blob/main/images/3.png) 
-
-![](https://github.com/JustSofter/ThirdTube-ES/blob/main/images/4.png)  
-
 ## Funciones
 
 - Reproducción de video hasta 360p
