@@ -77,7 +77,7 @@ Inserte ```make``` (si estás en linux) o ```make all_win``` (si estás en windo
    Para ffmpeg, libbrotli y libcurl, siga build.txt en cada directorio
    Para libctru, simplemente escriba ```make``` en biblioteca\libctru\source\libctru
 
-## Licenscia
+## Licencia
 Puede usar el código según los términos de la Licencia pública general de GNU GPL v3 o según los términos de cualquier revisión posterior de la GPL. Consulte el archivo de LICENCIA proporcionado para obtener más información.
 
 ## Licencias Third-party
